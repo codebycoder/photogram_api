@@ -8,7 +8,8 @@ from .forms import CustomUserCreationForm
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     model = User
-    list_display = ['email', 'username', 'name', 'birthday', 'is_staff', 'is_active', 'date_joined']
+    list_display = ['email', 'username', 'name',
+                    'birthday', 'is_staff', 'is_active', 'date_joined']
     list_filter = ['is_staff', 'is_active']
     fieldsets = (
         (None, {'fields': ('email', 'username', 'password', 'name', 'birthday')}),
